@@ -54,6 +54,17 @@ html{
 
 .base_btn{
     border-radius: 0;
+    background-color: #E50808;
+    color: white;
+}
+
+.base_btn:focus,
+.base_btn:hover{
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    border: 3px double black;
+    box-shadow: 2px 3px black;
 }
 
 .btn-group-vertical{
@@ -64,7 +75,6 @@ html{
     display: block;
     text-align: center;
     position: relative;
-    border: 2px solid black;
     width: 100%;
     height: 30%;
     margin: 0px;
@@ -79,3 +89,30 @@ html{
     text-align: center;
     margin: 3px 0px 20px 0px;
 }
+
+.wave
+{
+    position: relative;
+    background: #E50808;
+}
+.wave::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-repeat: repeat-x;
+    height: 10px;
+    background-size: 20px 20px;
+    background-image: radial-gradient(circle at 10px -5px, transparent 12px, white 13px);
+  }
+  .wave::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-repeat: repeat-x;
+    height: 15px;
+    background-size: 40px 20px;
+    background-image: radial-gradient(circle at 10px 15px, white 12px, transparent 13px);
