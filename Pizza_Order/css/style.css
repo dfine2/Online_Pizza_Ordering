@@ -1,0 +1,81 @@
+html{
+    width: 100%;
+    height: 100%;
+}
+
+
+.base_options{
+    display: none;
+}
+
+#base_container{
+    width: 80%;
+    height: 300px;
+    justify-content: center;
+    margin: auto;
+}
+
+.row{
+    height: 100%;
+}
+
+.base_price{
+    position: absolute;
+    margin: -22px 200px;
+    display: inline;
+}
+
+
+.base_form{
+    display: block;
+    width: 300px;
+    padding: 5px;
+    border: 2px solid black;
+    position: relative;
+    margin: auto;
+    margin-top: 25px;
+}
+
+
+
+.topping_price{
+    position: absolute;
+    margin: -22px 200px;
+    display: none;
+}
+
+.btn{
+    width: 100%;
+    font-size: 25px;
+    border: 2px solid black;
+    margin: 0px;
+   
+}
+
+.base_btn{
+    border-radius: 0;
+}
+
+.btn-group-vertical{
+    height: 100%;
+}
+
+.topping_header{
+    display: block;
+    text-align: center;
+    position: relative;
+    border: 2px solid black;
+    width: 100%;
+    height: 30%;
+    margin: 0px;
+    padding: 15px;
+}
+
+.toppings_form{
+    padding: 0px 20px;
+}
+
+.toppings_form p{
+    text-align: center;
+    margin: 3px 0px 20px 0px;
+}

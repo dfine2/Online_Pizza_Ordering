@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+    <header>
+        <meta charset="utf-8">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <!-- /Bootstrap CSS -->
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="./css/style.css">
+        <!-- /Custom CSS -->
+    </header>
+    <body>
+
+    <!-- Piza-Base Options -->
+        <!-- Pizza-Base Options Menu -->
+        <div class="container my-2" id="base_container">
+            <div class="row">
+                <div class="col border border-secondary">
+                </div>
+                <div class="col border border-secondary">
+                    <div class="row">
+                        <div class="col-2.5 border border-secondary">
+                            <div class="btn-group-vertical">
+                                <button type="button" class="btn base_btn autofocus" onfocus="baseDisplay('size_choice');">Size</button>
+                                <button type="button" class="btn base_btn" onclick="baseDisplay('crust_choice');">Crust</button>
+                                <button type="button" class="btn base_btn" onclick="baseDisplay('sauce_choice');">Sauce</button>
+                                <button type="button" class="btn base_btn" onclick="baseDisplay('cheese_choice');">Cheese</button>
+                            </div>
+                       </div>
+                       <div class="col border border-secondary"  id="base_display">
+                    
+                       </div>
+                    </div>
+                </div>
+            </div>
+        <!-- /Pizza-Base Options Menu -->
+        <!-- Size Options -->
+        <div class="container base_options" id="size_choice">
+            <div>
+                <form class="base_form" id="size_form">
+                <h3 class="base_heading">Pick your size:</h3>
+                    <label class="rlabel" for="personal">
+                        <input type="radio" name="size" id="personal" value="personal">Personal</input>
+                        <p class="base_price">$<var class=price>6.00</var></p>
+                    </label><br>
+                    <label class="rlabel" for="medium">
+                        <input type="radio" name="size" id="medium" value="medium">Medium</input>
+                        <p class="base_price">$<var class=price>10.00</var></p>
+                    </label><br>
+                    <label class="rlabel" for="large">
+                        <input type="radio" name="size" id="large" value="large">Large</input>
+                        <p class="base_price">$<var class="price">14.00</var></p>
+                    </label><br>
+                    <label class="rlabel" for="extra_large">
+                        <input type="radio" name="size" id="extra_large" value="extra_large">Extra Large</input>
+                        <p class="base_price">$<var class="price">16.00</var></p>
+                    </label><br>
+                </form>
+            </div>
+        </div>
+        <!-- /Size Options -->
+        <!-- Crust Options -->
+        <div class="container base_options" id="crust_choice">
+            <div>
+                <form class="base_form" id="crust_form">
+                <h3>Pick your crust:</h3>
+                    <label class="rlabel" for="plain">
+                        <input type="radio" name="crust" id="plain" value="plain">Plain Crust</input>
+                    </label><br>
+                    <label class="rlabel" for="gbcrust">
+                        <input type="radio" name="crust" id="gbcrust" value="gbcrust">Garlic Butter Crust</input>
+                    </label><br>
+                    <label class="rlabel" for="cscrust">
+                        <input type="radio" name="crust" id="cscrust" value="cscrust">Cheese-Stuffed Crust</input>
+                    </label><br>
+                    <label class="rlabel" for="spicy">
+                    <input type="radio" name="crust" id="spicy" value="spicy">Spicy Crust</input>
+                    </label><br>
+                    <label class="rlabel" for="hscrust">
+                    <input type="radio" name="crust" id="hscrust" value="hscrust">House Special Crust</input>
+                    </label>
+                </form>
+            </div>
+        </div>
+        <!-- /Crust Options -->
+        <!-- Sauce Options -->
+        <div class="container base_options" id="sauce_choice">
+            <div>
+                <form class="base_form" id="sauce_form">
+                <h3>Pick your sauce:</h3>
+                    <label class="rlabel" for="marinara">
+                        <input type="radio" name="sauce" id="marinara" value="marinara">Marinara Sauce</input>
+                    </label><br>
+                    <label class="rlabel" for="white">
+                        <input type="radio" name="sauce" id="white" value="white">White Sauce</input>
+                    </label><br>
+                    <label class="rlabel" for="bbq">
+                        <input type="radio" name="sauce" id="bbq" value="bbq">Barbecue Sauce</input>
+                    </label><br>
+                    <label class="rlabel" for="nosauce">
+                        <input type="radio" name="sauce" id="nosauce" value="nosauce">No Sauce</input>
+                    </label>
+                </form>
+            </div>
+        </div>
+        <!-- /Sauce Options -->
+        <!-- Cheese Options -->
+        <div class="container base_options" id="cheese_choice">
+            <div>
+                <form class="base_form" id="cheese_form">
+                <h3>Pick your cheese:</h3>
+                    <label class="rlabel" for="regular">
+                        <input type="radio" name="cheese" id="regular" value="regular">Regular Cheese</input>
+                    </label><br>
+                    <label class="rlabel" for="extra">
+                        <input type="radio" name="cheese" id="extra" value="extra">Extra Cheese</input>
+                        <p class="base_price">+$<var class=price>3.00</var></p>
+                    </label><br>
+                    <label class="rlabel" for="nocheese">
+                        <input type="radio" name="cheese" id="nocheese" value="nocheese">No Cheese</input>
+                    </label>
+                </form>
+            </div>
+        </div>
+        <!-- /Cheese Options -->
+    <!-- /Pizza-Base Options -->
+    <!-- Toppings -->
+    <div class="container" id="top_cont">
+        <div class="container text-center border-secondary px-0">
+            <h3>Choose your toppings!</h3>
+        </div>
+        <div class="row">
+            <div class="col border border-secondary px-0">
+                <div class="toppings_container">
+                 <span class="topping_header">
+                       <h4>Meats</h4>
+                 </span>
+                    <form class="toppings_form">
+                        <p><em>+$1.00 each after the first</em></p>
+                        <label class="clabel" for="pepperoni">
+                            <input type="checkbox" name="pepperoni" id="pepperoni" value="pepperoni">Pepperoni</input>
+                            <p class="topping_price">+$<var class=price>1.00</var></p>
+                        </label><br>
+                        <label class="clabel" for="sausage">
+                            <input type="checkbox" name="sausage" id="sausage" value="sausage">Sausage</input>
+                            <p class="topping_price">+$<var class=price>1.00</var></p>
+                        </label><br>
+                        <label class="clabel" for="canadian_bacon">
+                            <input type="checkbox" name="canadian_bacon" id="canadian_bacon" value="canadian_bacon">Canadian Bacon</input>
+                            <p class="topping_price">+$<var class=price>1.00</var></p>
+                        </label><br>
+                        <label class="clabel" for="ground_beef">
+                            <input type="checkbox" name="ground_beef" id="ground_beef" value="ground_beef">Ground Beef</input>
+                            <p class="topping_price">+$<var class=price>1.00</var></p>
+                        </label><br>
+                        <label class="clabel" for="anchovy">
+                            <input type="checkbox" name="anchovy" id="anchovy" value="anchovy">Anchovy</input>
+                            <p class="topping_price">+$<var class=price>1.00</var></p>
+                        </label><br>
+                        <label class="clabel" for="chicken">
+                            <input type="checkbox" name="chicken" id="chicken" value="chicken">Chicken</input>
+                            <p class="topping_price">+$<var class=price>1.00</var></p>
+                        </label>
+                    </form>
+                </div>
+            </div>
+            <div class="col border border-secondary px-0">
+                <div class="toppings_container">
+                    <span class="topping_header">
+                        <h4>Vegetables</h4>
+                    </span>
+                    <form class="toppings_form">
+                        <p><em>+$1.00 each after the first</em></p>
+                        <label class="clabel" for="tomatoes">
+                            <input type="checkbox" name="tomatoes" id="tomatoes" value="tomatoes">Tomatoes</input>
+                            <p class="topping_price">+$<var class=price>1.00</var></p>
+                        </label><br>
+                        <label class="clabel" for="onions">
+                            <input type="checkbox" name="onions" id="onions" value="onions">Onions</input>
+                            <p class="topping_price">+$<var class=price>1.00</var></p>
+                        </label><br>
+                        <label class="clabel" for="olives">
+                            <input type="checkbox" name="olives" id="olives" value="olives">Olives</input>
+                            <p class="topping_price">+$<var class=price>1.00</var></p>
+                        </label><br>
+                        <label class="clabel" for="green_peppers">
+                            <input type="checkbox" name="green_peppers" id="green_peppers" value="green_peppers">Green Peppers</input>
+                            <p class="topping_price">+$<var class=price>1.00</var></p>
+                        </label><br>
+                        <label class="clabel" for="mushrooms">
+                            <input type="checkbox" name="mushrooms" id="mushrooms" value="mushrooms">Mushrooms</input>
+                            <p class="topping_price">+$<var class=price>1.00</var></p>
+                        </label><br>
+                        <label class="clabel" for="pineapple">
+                            <input type="checkbox" name="pineapple" id="pineapple" value="pineapple">Pineapple</input>
+                            <p class="topping_price">+$<var class=price>1.00</var></p>
+                        </label><br>
+                        <label class="clabel" for="spinach">
+                            <input type="checkbox" name="spinach" id="spinach" value="spinach">Spinach</input>
+                            <p class="topping_price">+$<var class=price>1.00</var></p>
+                        </label><br>
+                        <label class="clabel" for="jalapenos">
+                            <input type="checkbox" name="jalapenos" id="jalapenos" value="jalapenos">Jalape&ntilde;os</input>
+                            <p class="topping_price">+$<var class=price>1.00</var></p>
+                        </label>
+                    </form>
+                </div>
+            </div>
+            <div class="col border border-secondary"></div>
+    </div>
+    <!-- /Toppings -->
+
+
+    </body>
+
+    <!-- JQuery, Tether, and Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <!-- /JQuery, Tether, and Bootstrap -->
+    <!-- Custom JS -->
+    <script src="./js/script.js"></script>
+    <!-- /Custom JS -->
+
+</html>
