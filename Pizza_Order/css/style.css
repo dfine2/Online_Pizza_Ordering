@@ -5,9 +5,6 @@ html, body{
 }
 
 
-.base_options{
-    display: none;
-}
 #base_display{
     background-color: white;
 }
@@ -192,4 +189,12 @@ html, body{
 #coupon_form{
     margin-bottom: 0px;
     padding-bottom: 0px;
+}
+h1{
+    text-align: center;
+    margin: 10px;
+    padding: 3px;
+}
+#base_options_section{
+    display: none;
 }
