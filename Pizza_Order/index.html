@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    <header>
+    <head>
         <meta charset="utf-8">
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -8,23 +8,33 @@
         <!-- Custom CSS -->
         <link rel="stylesheet" href="./css/style.css">
         <!-- /Custom CSS -->
-    </header>
+    </head>
     <body>
-
+        <header>
+            <nav>
+                <span id="brand">Donatello's Pizzeria</span>
+                <ul id="top-list">
+                    <li>Delivery &bull;</li>
+                    <li>Dine-in &bull;</li>
+                    <li>Carry-out</li>
+                </ul>
+                <span id="address">4560 Cordell Street, Booniesville, IN</span>
+            </nav>
+        </header>
     <!-- Piza-Base Options -->
         <!-- Pizza-Base Options Menu -->
-        <div class="container my-2" id="base_container">
+        <div class="container my-3" id="base_container">
             <div class="row">
-                <div class="col border border-secondary">
+                <div class="col border border-secondary" id="pizza_box">
                 </div>
                 <div class="col border border-secondary">
                     <div class="row">
                         <div class="col-2.5 border border-secondary">
                             <div class="btn-group-vertical">
-                                <button type="button" class="btn base_btn btn-alert autofocus" onfocus="baseDisplay('size_choice');">Size</button>
-                                <button type="button" class="btn base_btn btn-alert" onclick="baseDisplay('crust_choice');">Crust</button>
-                                <button type="button" class="btn base_btn btn-alert" onclick="baseDisplay('sauce_choice');">Sauce</button>
-                                <button type="button" class="btn base_btn btn-alert" onclick="baseDisplay('cheese_choice');">Cheese</button>
+                                <button type="button" class="btn base_btn autofocus" onfocus="baseDisplay('size_choice');">Size</button>
+                                <button type="button" class="btn base_btn" onclick="baseDisplay('crust_choice');">Crust</button>
+                                <button type="button" class="btn base_btn" onclick="baseDisplay('sauce_choice');">Sauce</button>
+                                <button type="button" class="btn base_btn" onclick="baseDisplay('cheese_choice');">Cheese</button>
                             </div>
                        </div>
                        <div class="col border border-secondary"  id="base_display">
@@ -33,12 +43,15 @@
                     </div>
                 </div>
             </div>
+            <br>
         <!-- /Pizza-Base Options Menu -->
         <!-- Size Options -->
         <div class="container base_options" id="size_choice">
             <div>
                 <form class="base_form" id="size_form">
-                <h3 class="base_heading">Pick your size:</h3>
+                    <span class="base_header wave">
+                        <h4 class="text-white">Size</h4>
+                    </span>
                     <label class="rlabel" for="personal">
                         <input type="radio" name="size" id="personal" value="personal">Personal</input>
                         <p class="base_price">$<var class=price>6.00</var></p>
@@ -63,7 +76,9 @@
         <div class="container base_options" id="crust_choice">
             <div>
                 <form class="base_form" id="crust_form">
-                <h3>Pick your crust:</h3>
+                    <span class="base_header wave">
+                         <h4 class="text-white">Crust</h4>
+                     </span>
                     <label class="rlabel" for="plain">
                         <input type="radio" name="crust" id="plain" value="plain">Plain Crust</input>
                     </label><br>
@@ -87,7 +102,9 @@
         <div class="container base_options" id="sauce_choice">
             <div>
                 <form class="base_form" id="sauce_form">
-                <h3>Pick your sauce:</h3>
+                    <span class="base_header wave">
+                         <h4 class="text-white">Sauce</h4>
+                    </span>
                     <label class="rlabel" for="marinara">
                         <input type="radio" name="sauce" id="marinara" value="marinara">Marinara Sauce</input>
                     </label><br>
@@ -108,7 +125,9 @@
         <div class="container base_options" id="cheese_choice">
             <div>
                 <form class="base_form" id="cheese_form">
-                <h3>Pick your cheese:</h3>
+                    <span class="base_header wave">
+                        <h4 class="text-white">Cheese</h4>
+                    </span>
                     <label class="rlabel" for="regular">
                         <input type="radio" name="cheese" id="regular" value="regular">Regular Cheese</input>
                     </label><br>
@@ -126,12 +145,9 @@
     <!-- /Pizza-Base Options -->
     <!-- Toppings -->
     <div class="container" id="top_cont">
-        <div class="container text-center border-secondary px-0">
-            <h3>Choose your toppings!</h3>
-        </div>
         <div class="row">
-            <div class="col border border-secondary px-0">
-                <div class="toppings_container">
+            <div class="col border border-secondary px-0 toppings_container">
+                <div>
                  <span class="topping_header wave">
                        <h4 class="text-white">Meats</h4>
                  </span>
@@ -164,8 +180,8 @@
                     </form>
                 </div>
             </div>
-            <div class="col border border-secondary px-0">
-                <div class="toppings_container">
+            <div class="col border border-secondary px-0 toppings_container">
+                <div>
                     <span class="topping_header wave">
                         <h4 class="text-white">Vegetables</h4>
                     </span>
@@ -206,12 +222,31 @@
                     </form>
                 </div>
             </div>
-            <div class="col border border-secondary"></div>
+            <div class="col border border-secondary px-0" id="checkout_box">
+                <div class="container px-0" id= "img_container">
+                    <img src=".\img\pizza.jpg" alt="" id="pizza_picture">
+                </div>
+                <form id="coupon_form">
+                    <span>Have a coupon code?</span>
+                    <p>Enter it below!</p>
+                    <label for="coupon_input">
+                    <input type="text" id="coupon_input" name="coupon_input">
+                    <button type="submit" id="submit_coupon" name="submit_coupon">Submit!</button>
+                    </label>
+                </form>
+                <button type="button" class="btn" id="place_order">Place your Order!</button>
+            </div>
+        </div>
     </div>
     <!-- /Toppings -->
-
+    <footer>
+        <nav>
+            
+        </nav>
+    </footer>
 
     </body>
+   
 
     <!-- JQuery, Tether, and Bootstrap -->
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>

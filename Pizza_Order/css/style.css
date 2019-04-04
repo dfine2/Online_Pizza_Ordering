@@ -1,11 +1,15 @@
-html{
+html, body{
     width: 100%;
     height: 100%;
+    background-color: #08e5e5;
 }
 
 
 .base_options{
     display: none;
+}
+#base_display{
+    background-color: white;
 }
 
 #base_container{
@@ -21,21 +25,25 @@ html{
 
 .base_price{
     position: absolute;
-    margin: -22px 200px;
+    margin: -22px 280px;
     display: inline;
 }
 
 
 .base_form{
     display: block;
-    width: 300px;
-    padding: 5px;
-    border: 2px solid black;
+    width: 100%;
     position: relative;
     margin: auto;
-    margin-top: 25px;
+    margin-top: 30px;
+    margin-bottom: 25px;
+    border: 2px solid black;
+    background-color: #ffe6cc;
 }
 
+.base_form label{
+    padding-left: 10px;
+}
 
 
 .topping_price{
@@ -64,14 +72,14 @@ html{
     color: white;
     font-weight: bold;
     border: 3px double black;
-    box-shadow: 2px 3px black;
+    box-shadow: inset 1px 3px 2px 1px black;
 }
 
 .btn-group-vertical{
     height: 100%;
 }
 
-.topping_header{
+.topping_header, .base_header{
     display: block;
     text-align: center;
     position: relative;
@@ -104,7 +112,7 @@ html{
     background-repeat: repeat-x;
     height: 10px;
     background-size: 20px 20px;
-    background-image: radial-gradient(circle at 10px -5px, transparent 12px, white 13px);
+    background-image: radial-gradient(circle at 10px -5px, transparent 12px, #ffe6cc 13px);
   }
   .wave::after{
     content: "";
@@ -115,4 +123,73 @@ html{
     background-repeat: repeat-x;
     height: 15px;
     background-size: 40px 20px;
-    background-image: radial-gradient(circle at 10px 15px, white 12px, transparent 13px);
+    background-image: radial-gradient(circle at 10px 15px, #ffe6cc 12px, transparent 13px);
+  }
+ .toppings_container{
+    background-color: #ffe6cc;
+ }
+
+ #pizza_box{
+     background-color: #ccfeff;
+ }
+
+ nav{
+     background-color: #E50808;
+     color: white;
+     padding: 10px;
+     width: 100%;
+     margin: 0;
+     position: relative;
+ }
+
+ nav p{
+     display: inline;
+     margin: 15em;
+ }
+#top-list, #top-list li{
+    display: inline;
+    position: relative;
+    left: 13%;
+    top: 50%;
+    text-align: center;
+    font-size: 18px;
+}
+#address {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+    font-size: 18px;
+  }
+  #brand{
+      font-size: 18px;
+  }
+#pizza_picture{
+    width: 100%;
+    height: 80%;
+}
+#place_order{
+    background-color: #E50808;
+    color: white;
+    margin: 0px;
+    padding: 9px;
+    position: relative;
+}
+#place_order:hover{
+    box-shadow: inset 1px 3px 2px 1px black;
+    font-weight: bold;
+}
+#checkout_box{
+    background-color:#ffe6cc;
+    padding: 0px;
+}
+#coupon_form{
+    text-align: center;
+}
+#top_cont .row{
+    margin: 10px 0px 40px 0px;
+    
+}
+#coupon_form{
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
