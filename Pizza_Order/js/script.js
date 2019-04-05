@@ -1,21 +1,28 @@
 /*==========================================
         PIZZA-BASE OPTIONS
 ==========================================*/
-window.onload = function(){
-       var toppingPrice = document.getElementsByClassName("topping_price");
-       toppingPrice.style.display="none";
-}
+
 //Size button clicked by default
 window.onload = function(){
         document.getElementById("size_button").focus();
 }
 
 
-function baseDisplay(id) //Load relevant window
+function baseDisplay(id)
+{
+        document.getElementById(id).style.display = "block";
+}
+function baseHide(id1, id2, id3)
+{
+        document.getElementById(id1).style.display = "none";
+        document.getElementById(id2).style.display = "none";
+        document.getElementById(id3).style.display = "none";
+}
+/*function baseDisplay(id) //Load relevant window
 {
         var source = document.getElementById(id);
         document.getElementById('base_display').innerHTML = source.innerHTML;
-}
+}*/
 
 
 /*=============================================
@@ -38,32 +45,6 @@ function countToppings(cname)
         return count;
 }
 
-function displayToppingPrice(cname)
-{
-        switch (cname)
-        {
-                case "meat":
-                        var labels = document.getElementById("meat_form").getElementsByClassName("clabel");
-                        break;
-                case "veg":
-                        var labels = document.getElementById("veg_form").getElementsByClassName("clabel");
-                        break;
-                default:
-                        break;
-        }
-        var count= countToppings(cname);
-        if (count > 1)
-        {
-                for (var i=0; i<labels.length;++i)
-                {
-                        if (labels[i].getElementsByTagName("input").checked == true)
-                        {
-                                labels[i].getElementsByClassName("topping_price").style.removeProperty("display");
-                        }
-                }
-        }
-}
-
 function toppingsCharge(cname)
 {
         var price = 0;
@@ -72,6 +53,5 @@ function toppingsCharge(cname)
         {
                 price += count;
         }
-        displayToppingPrice(cname);
 }
 

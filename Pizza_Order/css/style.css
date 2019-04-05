@@ -6,14 +6,13 @@ html, body{
 
 
 #base_display{
-    background-color: white;
+    background-image: url("../img/baseback.jpg")
 }
 
 #base_container{
     width: 80%;
     height: 300px;
-    justify-content: center;
-    margin: auto;
+
 }
 
 .row{
@@ -22,13 +21,13 @@ html, body{
 
 .base_price{
     position: absolute;
-    margin: -22px 280px;
+    margin: -35px 280px;
     display: inline;
 }
 
 
 .base_form{
-    display: block;
+    display: none;
     width: 100%;
     position: relative;
     margin: auto;
@@ -36,18 +35,13 @@ html, body{
     margin-bottom: 25px;
     border: 2px solid black;
     background-color: #ffe6cc;
+    font-size: 1.5em;
 }
 
 .base_form label{
-    padding-left: 10px;
+    padding-left: 15px;
 }
 
-
-.topping_price{
-    position: absolute;
-    margin: -22px 200px;
-    display: none;
-}
 
 .btn{
     width: 100%;
@@ -126,10 +120,6 @@ html, body{
     background-color: #ffe6cc;
  }
 
- #pizza_box{
-     background-color: #ccfeff;
- }
-
  nav{
      background-color: #E50808;
      color: white;
@@ -168,7 +158,7 @@ html, body{
     background-color: #E50808;
     color: white;
     margin: 0px;
-    padding: 9px;
+    padding: 20px;
     position: relative;
 }
 #place_order:hover{
@@ -195,6 +185,4 @@ h1{
     margin: 10px;
     padding: 3px;
 }
-#base_options_section{
-    display: none;
-}
+

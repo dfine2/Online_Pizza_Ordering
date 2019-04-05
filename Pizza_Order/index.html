@@ -2,6 +2,10 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="David Fine">
+        <meta title="Finest Pizzas | Order Online">
+        <meta name="description" content="Finest Pizzas | Order Online">
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <!-- /Bootstrap CSS -->
@@ -12,7 +16,7 @@
     <body>
         <header>
             <nav>
-                <span id="brand">Donatello's Pizzeria</span>
+                <span id="brand">Finest Pizzas</span>
                 <ul id="top-list">
                     <li>Delivery &bull;</li>
                     <li>Dine-in &bull;</li>
@@ -25,127 +29,114 @@
     <!-- Piza-Base Options -->
         <!-- Pizza-Base Options Menu -->
         <div class="container my-3" id="base_container">
-            <div class="row">
-                <div class="col border border-secondary" id="pizza_box">
-                </div>
-                <div class="col border border-secondary">
                     <div class="row">
                         <div class="col-2.5 border border-secondary">
                             <div class="btn-group-vertical">
-                                <button type="button" class="btn base_btn autofocus" onfocus="baseDisplay('size_choice');" id="size_button">Size</button>
-                                <button type="button" class="btn base_btn" onfocus="baseDisplay('crust_choice');">Crust</button>
-                                <button type="button" class="btn base_btn" onfocus="baseDisplay('sauce_choice');">Sauce</button>
-                                <button type="button" class="btn base_btn" onfocus="baseDisplay('cheese_choice');">Cheese</button>
+                                <button type="button" class="btn base_btn autofocus" onfocus="baseDisplay('size_form'); baseHide('crust_form','sauce_form','cheese_form');" id="size_button">Size</button>
+                                <button type="button" class="btn base_btn" onfocus="baseDisplay('crust_form'); baseHide('size_form','sauce_form','cheese_form');">Crust</button>
+                                <button type="button" class="btn base_btn" onfocus="baseDisplay('sauce_form'); baseHide('size_form','crust_form','cheese_form');">Sauce</button>
+                                <button type="button" class="btn base_btn" onfocus="baseDisplay('cheese_form'); baseHide('size_form','crust_form','sauce_form');">Cheese</button>
                             </div>
                        </div>
                        <div class="col border border-secondary"  id="base_display">
+                            <!-- /Pizza-Base Options Menu -->
+                            <!-- Size Options -->
+                                <div class="container base_options" id="size_choice" name="crust_choice">
+                                    <form class="base_form" id="size_form" name="size_form">
+                                        <span class="base_header wave">
+                                            <h4 class="text-white">Size</h4>
+                                        </span>
+                                        <label class="rlabel" for="personal">
+                                            <input class="base_button" type="radio" name="size" id="personal" value="personal" onclick="saveSizeChoice();">Personal</input>
+                                            <p class="base_price">$<var class=price>6.00</var></p>
+                                        </label><br>
+                                        <label class="rlabel" for="medium">
+                                            <input class="base_button" type="radio" name="size" id="medium" value="medium">Medium</input>
+                                            <p class="base_price">$<var class=price>10.00</var></p>
+                                        </label><br>
+                                        <label class="rlabel" for="large">
+                                            <input class="base_button" type="radio" name="size" id="large" value="large">Large</input>
+                                            <p class="base_price">$<var class="price">14.00</var></p>
+                                        </label><br>
+                                        <label class="rlabel" for="extra_large">
+                                            <input class="base_button" type="radio" name="size" id="extra_large" value="extra_large">Extra Large</input>
+                                            <p class="base_price">$<var class="price">16.00</var></p>
+                                        </label><br>
+                                    </form>
+                                </div>
+                                <!-- /Size Options -->
+                                <!-- Crust Options -->
+                                <div class="container base_options" id="crust_choice" name="crust_choice">
+                                    <form class="base_form" id="crust_form" name="crust_form">
+                                        <span class="base_header wave">
+                                            <h4 class="text-white">Crust</h4>
+                                        </span>
+                                        <label class="rlabel" for="plain">
+                                            <input  class="base_button" type="radio" name="crust" id="plain" value="plain" onclick="saveChoice('crust_form, crust');">Plain Crust</input>
+                                        </label><br>
+                                        <label class="rlabel" for="gbcrust">
+                                            <input class="base_button" type="radio" name="crust" id="gbcrust" value="gbcrust">Garlic Butter Crust</input>
+                                        </label><br>
+                                        <label class="rlabel" for="cscrust">
+                                            <input class="base_button" type="radio" name="crust" id="cscrust" value="cscrust">Cheese-Stuffed Crust</input>
+                                        </label><br>
+                                        <label class="rlabel" for="spicy">
+                                        <input class="base_button" type="radio" name="crust" id="spicy" value="spicy">Spicy Crust</input>
+                                        </label><br>
+                                        <label class="rlabel" for="hscrust">
+                                        <input class="base_button" type="radio" name="crust" id="hscrust" value="hscrust">House Special Crust</input>
+                                        </label>
+                                    </form>
+                                </div>
+                                <!-- /Crust Options -->
+                                <!-- Sauce Options -->
+                                <div class="container base_options" id="sauce_choice" name="sauce_choice">
+                                        <form class="base_form" id="sauce_form" name="sauce_form">
+                                        <span class="base_header wave">
+                                            <h4 class="text-white">Sauce</h4>
+                                        </span>
+                                        <label class="rlabel" for="marinara">
+                                            <input class="base_button" type="radio" name="sauce" id="marinara" value="marinara">Marinara Sauce</input>
+                                        </label><br>
+                                        <label class="rlabel" for="white">
+                                            <input class="base_button" type="radio" name="sauce" id="white" value="white">White Sauce</input>
+                                        </label><br>
+                                        <label class="rlabel" for="bbq">
+                                            <input class="base_button" type="radio" name="sauce" id="bbq" value="bbq">Barbecue Sauce</input>
+                                        </label><br>
+                                        <label class="rlabel" for="nosauce">
+                                            <input class="base_button" type="radio" name="sauce" id="nosauce" value="nosauce">No Sauce</input>
+                                        </label>
+                                    </form>
+                                </div>
+                                <!-- /Sauce Options -->
+                                <!-- Cheese Options -->
+                                <div class="container base_options" id="cheese_choice" name="cheese_choice">
+                                    <form class="base_form" id="cheese_form" name="cheese_form">
+                                        <span class="base_header wave">
+                                            <h4 class="text-white">Cheese</h4>
+                                        </span>
+                                        <label class="rlabel" for="regular">
+                                            <input class="base_button" type="radio" name="cheese" id="regular" value="regular">Regular Cheese</input>
+                                        </label><br>
+                                        <label class="rlabel" for="extra">
+                                            <input class="base_button" type="radio" name="cheese" id="extra" value="extra">Extra Cheese</input>
+                                            <p class="base_price">+$<var class=price>3.00</var></p>
+                                        </label><br>
+                                        <label class="rlabel" for="nocheese">
+                                            <input class="base_button" type="radio" name="cheese" id="nocheese" value="nocheese">No Cheese</input>
+                                        </label>
+                                    </form>
+                                </div>
+            <!-- /Cheese Options -->
+        <!-- /Pizza-Base Options -->
                     
                        </div>
                     </div>
                 </div>
             </div>
             <br>
-        <!-- /Pizza-Base Options Menu -->
-        <!-- Size Options -->
-        <section id="base_options_section">
-            <div class="container base_options" id="size_choice" name="crust_choice">
-                <div>
-                    <form class="base_form" id="size_form" name="size_form">
-                        <span class="base_header wave">
-                            <h4 class="text-white">Size</h4>
-                        </span>
-                        <label class="rlabel" for="personal">
-                            <input class="base_button" type="radio" name="size" id="personal" value="personal" onclick="saveSizeChoice();">Personal</input>
-                            <p class="base_price">$<var class=price>6.00</var></p>
-                        </label><br>
-                        <label class="rlabel" for="medium">
-                            <input class="base_button" type="radio" name="size" id="medium" value="medium">Medium</input>
-                            <p class="base_price">$<var class=price>10.00</var></p>
-                        </label><br>
-                        <label class="rlabel" for="large">
-                            <input class="base_button" type="radio" name="size" id="large" value="large">Large</input>
-                            <p class="base_price">$<var class="price">14.00</var></p>
-                        </label><br>
-                        <label class="rlabel" for="extra_large">
-                            <input class="base_button" type="radio" name="size" id="extra_large" value="extra_large">Extra Large</input>
-                            <p class="base_price">$<var class="price">16.00</var></p>
-                        </label><br>
-                    </form>
-                </div>
-            </div>
-            <!-- /Size Options -->
-            <!-- Crust Options -->
-            <div class="container base_options" id="crust_choice" name="crust_choice">
-                <div>
-                    <form class="base_form" id="crust_form" name="crust_form">
-                        <span class="base_header wave">
-                            <h4 class="text-white">Crust</h4>
-                        </span>
-                        <label class="rlabel" for="plain">
-                            <input  class="base_button" type="radio" name="crust" id="plain" value="plain" onclick="saveChoice('crust_form, crust');">Plain Crust</input>
-                        </label><br>
-                        <label class="rlabel" for="gbcrust">
-                            <input class="base_button" type="radio" name="crust" id="gbcrust" value="gbcrust">Garlic Butter Crust</input>
-                        </label><br>
-                        <label class="rlabel" for="cscrust">
-                            <input class="base_button" type="radio" name="crust" id="cscrust" value="cscrust">Cheese-Stuffed Crust</input>
-                        </label><br>
-                        <label class="rlabel" for="spicy">
-                        <input class="base_button" type="radio" name="crust" id="spicy" value="spicy">Spicy Crust</input>
-                        </label><br>
-                        <label class="rlabel" for="hscrust">
-                        <input class="base_button" type="radio" name="crust" id="hscrust" value="hscrust">House Special Crust</input>
-                        </label>
-                    </form>
-                </div>
-            </div>
-            <!-- /Crust Options -->
-            <!-- Sauce Options -->
-            <div class="container base_options" id="sauce_choice" name="sauce_choice">
-                <div>
-                    <form class="base_form" id="sauce_form" name="sauce_form">
-                        <span class="base_header wave">
-                            <h4 class="text-white">Sauce</h4>
-                        </span>
-                        <label class="rlabel" for="marinara">
-                            <input class="base_button" type="radio" name="sauce" id="marinara" value="marinara">Marinara Sauce</input>
-                        </label><br>
-                        <label class="rlabel" for="white">
-                            <input class="base_button" type="radio" name="sauce" id="white" value="white">White Sauce</input>
-                        </label><br>
-                        <label class="rlabel" for="bbq">
-                            <input class="base_button" type="radio" name="sauce" id="bbq" value="bbq">Barbecue Sauce</input>
-                        </label><br>
-                        <label class="rlabel" for="nosauce">
-                            <input class="base_button" type="radio" name="sauce" id="nosauce" value="nosauce">No Sauce</input>
-                        </label>
-                    </form>
-                </div>
-            </div>
-            <!-- /Sauce Options -->
-            <!-- Cheese Options -->
-            <div class="container base_options" id="cheese_choice" name="cheese_choice">
-                <div>
-                    <form class="base_form" id="cheese_form" name="cheese_form">
-                        <span class="base_header wave">
-                            <h4 class="text-white">Cheese</h4>
-                        </span>
-                        <label class="rlabel" for="regular">
-                            <input class="base_button" type="radio" name="cheese" id="regular" value="regular">Regular Cheese</input>
-                        </label><br>
-                        <label class="rlabel" for="extra">
-                            <input class="base_button" type="radio" name="cheese" id="extra" value="extra">Extra Cheese</input>
-                            <p class="base_price">+$<var class=price>3.00</var></p>
-                        </label><br>
-                        <label class="rlabel" for="nocheese">
-                            <input class="base_button" type="radio" name="cheese" id="nocheese" value="nocheese">No Cheese</input>
-                        </label>
-                    </form>
-                </div>
-            </div>
-    </section>
-        <!-- /Cheese Options -->
-    <!-- /Pizza-Base Options -->
+       
     <!-- Toppings -->
     <div class="container" id="top_cont">
         <div class="row">
@@ -158,27 +149,22 @@
                         <p><em>+$1.00 each after the first</em></p>
                         <label class="clabel" for="pepperoni" id="pepperoni_label">
                             <input type="checkbox" name="pepperoni" class="meat" id="pepperoni" value="pepperoni" onclick="countToppings('meat'); toppingsCharge('meat');" >Pepperoni</input>
-                            <p class="topping_price">+$<var class=price>1.00</var></p>
                         </label><br>
                         <label class="clabel" for="sausage" id="sausage_label">
                             <input type="checkbox" name="sausage" class="meat" id="sausage" value="sausage" onclick="countToppings('meat'); toppingsCharge('meat');">Sausage</input>
-                            <p class="topping_price">+$<var class=price>1.00</var></p>
                         </label><br>
                         <label class="clabel" for="canadian_bacon" id="canadian_bacon_label">
                             <input type="checkbox" name="canadian_bacon" class="meat" id="canadian_bacon" value="canadian_bacon" onclick="countToppings('meat'); toppingsCharge('meat');">Canadian Bacon</input>
-                            <p class="topping_price">+$<var class=price>1.00</var></p>
                         </label><br>
                         <label class="clabel" for="ground_beef" id="ground_beef_label">
                             <input type="checkbox" name="ground_beef" class="meat" id="ground_beef" value="ground_beef" onclick="countToppings('meat'); toppingsCharge('meat');">Ground Beef</input>
-                            <p class="topping_price">+$<var class=price>1.00</var></p>
                         </label><br>
                         <label class="clabel" for="anchovy" id="anchovy_label">
                             <input type="checkbox" name="anchovy" class="meat" id="anchovy" value="anchovy" onclick="countToppings('meat'); toppingsCharge('meat');">Anchovy</input>
-                            <p class="topping_price">+$<var class=price>1.00</var></p>
                         </label><br>
                         <label class="clabel" for="chicken" id="chicken_label">
                             <input type="checkbox" name="chicken" class="meat" id="chicken" value="chicken" onclick="countToppings('meat'); toppingsCharge('meat');">Chicken</input>
-                            <p class="topping_price">+$<var class=price>1.00</var></p>
+                           
                         </label>
                     </form>
                 </div>
@@ -191,36 +177,29 @@
                     <form class="toppings_form" name="veg_form" id="veg_form">
                         <p><em>+$1.00 each after the first</em></p>
                         <label class="clabel" for="tomatoes" id="tomatoes_label">
-                            <input type="checkbox" name="tomatoes" class="veg" id="tomatoes" value="tomatoes" onclick="countToppings('veg'); toppingsCharge('veg');">Tomatoes</input>
-                            <p class="topping_price">+$<var class=price>1.00</var></p>
+                            <input type="checkbox" name="tomatoes" class="veg" id="tomatoes" value="tomatoes" onclick="countToppings('veg'); toppingsCharge('veg');showPrice('veg');">Tomatoes</input>
                         </label><br>
                         <label class="clabel" for="onions" id="onions_label">
-                            <input type="checkbox" name="onions" class="veg" id="onions" value="onions"onclick="countToppings('veg'); toppingsCharge('veg');">Onions</input>
-                            <p class="topping_price">+$<var class=price>1.00</var></p>
+                            <input type="checkbox" name="onions" class="veg" id="onions" value="onions"onclick="countToppings('veg'); toppingsCharge('veg');showPrice('veg');">Onions</input>
                         </label><br>
                         <label class="clabel" for="olives" id="olives_label">
-                            <input type="checkbox" name="olives" class="veg" id="olives" value="olives"onclick="countToppings('veg'); toppingsCharge('veg');">Olives</input>
-                            <p class="topping_price">+$<var class=price>1.00</var></p>
+                            <input type="checkbox" name="olives" class="veg" id="olives" value="olives"onclick="countToppings('veg'); toppingsCharge('veg');showPrice('veg');">Olives</input>
                         </label><br>
                         <label class="clabel" for="green_peppers" id="green_peppers_label">
-                            <input type="checkbox" name="green_peppers" class="veg" id="green_peppers" value="green_peppers"onclick="countToppings('veg'); toppingsCharge('veg');">Green Peppers</input>
-                            <p class="topping_price">+$<var class=price>1.00</var></p>
+                            <input type="checkbox" name="green_peppers" class="veg" id="green_peppers" value="green_peppers"onclick="countToppings('veg'); toppingsCharge('veg');showPrice('veg');">Green Peppers</input>
                         </label><br>
                         <label class="clabel" for="mushrooms" id="mushrooms_label">
-                            <input type="checkbox" name="mushrooms" class="veg" id="mushrooms" value="mushrooms"onclick="countToppings('veg'); toppingsCharge('veg');">Mushrooms</input>
-                            <p class="topping_price">+$<var class=price>1.00</var></p>
+                            <input type="checkbox" name="mushrooms" class="veg" id="mushrooms" value="mushrooms"onclick="countToppings('veg'); toppingsCharge('veg');showPrice('veg');">Mushrooms</input>
                         </label><br>
                         <label class="clabel" for="pineapple" id="pineapple_label">
-                            <input type="checkbox" name="pineapple" class="veg" id="pineapple" value="pineapple"onclick="countToppings('veg'); toppingsCharge('veg');">Pineapple</input>
-                            <p class="topping_price">+$<var class=price>1.00</var></p>
+                            <input type="checkbox" name="pineapple" class="veg" id="pineapple" value="pineapple"onclick="countToppings('veg'); toppingsCharge('veg');showPrice('veg');">Pineapple</input>
                         </label><br>
                         <label class="clabel" for="spinach" id="spinach_label">
-                            <input type="checkbox" name="spinach" class="veg" id="spinach" value="spinach"onclick="countToppings('veg'); toppingsCharge('veg');">Spinach</input>
-                            <p class="topping_price">+$<var class=price>1.00</var></p>
+                            <input type="checkbox" name="spinach" class="veg" id="spinach" value="spinach"onclick="countToppings('veg'); toppingsCharge('veg');showPrice('veg');">Spinach</input>
                         </label><br>
                         <label class="clabel" for="jalapenos" id="jalapenos_label">
-                            <input type="checkbox" name="jalapenos" class="veg" id="jalapenos" value="jalapenos"onclick="countToppings('veg'); toppingsCharge('veg');">Jalape&ntilde;os</input>
-                            <p class="topping_price">+$<var class=price>1.00</var></p>
+                            <input type="checkbox" name="jalapenos" class="veg" id="jalapenos" value="jalapenos"onclick="countToppings('veg'); toppingsCharge('veg');showPrice('veg');">Jalape&ntilde;os</input>
+                            <p class="topping_price" ></p>
                         </label>
                     </form>
                 </div>
