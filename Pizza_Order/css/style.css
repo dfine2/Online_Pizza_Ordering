@@ -39,7 +39,8 @@ html, body{
 }
 
 .base_form label{
-    padding-left: 15px;
+    position: relative;
+    right: -400px;
 }
 
 
@@ -131,12 +132,12 @@ html, body{
 
  nav p{
      display: inline;
-     margin: 15em;
+   
  }
 #top-list, #top-list li{
     display: inline;
     position: relative;
-    left: 13%;
+    left: 15%;
     top: 50%;
     text-align: center;
     font-size: 18px;
@@ -186,3 +187,68 @@ h1{
     padding: 3px;
 }
 
+table, tr{
+    table-layout: fixed;
+    width: 100%;
+}
+td{
+    width: 50%;
+}
+
+.receipt_total{
+    border-top: 4px groove black;
+    font-weight: bold;
+}
+
+.receipt_price{
+    text-align: right;
+}
+
+.modal-content{
+    display: flex;
+    margin: 10px;
+    padding: 6px;
+    min-height: 300px;
+
+}
+
+#confirm_button{
+    position: absolute;
+    right: 16px;
+    bottom: 8px;
+    background-color: #E50808;
+    color: white;
+}
+
+.side_image{
+    position: absolute;
+    margin-left: 25px;
+    border-radius: 25%;
+    width: 250px;
+    height: auto;
+   
+}
+
+#cheese_form{
+    height: 260px;
+}
+
+#cheese_image{
+    top: 90px;
+}
+
+#crust_image{
+    top: 80px;
+}
+
+#sauce_image{
+    top: 70px;
+}
+
+h1{
+    font-family: 'Century Gothic', Arial, Helvetica, sans-serif;
+}
+
+h4{
+    font-family: 'Oleo Script', Arial, Helvetica, sans-serif;
+}
