@@ -31,7 +31,7 @@
         <!-- Pizza-Base Options Menu -->
         <div class="container my-3" id="base_container">
                     <div class="row">
-                        <div class="col-2.5 border border-secondary">
+                        <div class="col-2.5 border border-secondary no_phone">
                             <div class="btn-group-vertical">
                                 <button type="button" class="btn base_btn autofocus" onfocus="baseDisplay('size_form'); baseHide('crust_form','sauce_form','cheese_form');" id="size_button">Size</button>
                                 <button type="button" class="btn base_btn" onfocus="baseDisplay('crust_form'); baseHide('size_form','sauce_form','cheese_form');">Crust</button>
@@ -47,25 +47,28 @@
                                         <span class="base_header wave">
                                             <h4 class="text-white">Size</h4>
                                         </span>
-                                        <div class="img_container">
-                                            <img src=".\img\size_photo.jpg" alt="size" class="side_image" id="size_image">
+                                        <div class = "base_text container">
+                                            <div class="img_container">
+                                                    <img src=".\img\size_photo.jpg" alt="size" class="side_image" id="size_image">
+                                            </div>
+                                            
+                                            <label class="rlabel" for="personal">
+                                                <input class="base_button" type="radio" name="size" id="personal" value="Personal" checked>Personal</input>
+                                                <p class="base_price">$<var class=size_price value="6.00">6.00</var></p>
+                                            </label><br>
+                                            <label class="rlabel" for="medium">
+                                                <input class="base_button" type="radio" name="size" id="medium" value="Medium">Medium</input>
+                                                <p class="base_price">$<var class=size_price value="10.00">10.00</var></p>
+                                            </label><br>
+                                            <label class="rlabel" for="large">
+                                                <input class="base_button" type="radio" name="size" id="large" value="Large">Large</input>
+                                                <p class="base_price">$<var class="size_price" value="14.00">14.00</var></p>
+                                            </label><br>
+                                            <label class="rlabel" for="extra_large">
+                                                <input class="base_button" type="radio" name="size" id="extra_large" value="Extra Large">Extra Large</input>
+                                                <p class="base_price">$<var class="size_price" value="16.00">16.00</var></p>
+                                            </label><br>
                                         </div>
-                                        <label class="rlabel" for="personal">
-                                            <input class="base_button" type="radio" name="size" id="personal" value="Personal" checked>Personal</input>
-                                            <p class="base_price">$<var class=size_price value="6.00">6.00</var></p>
-                                        </label><br>
-                                        <label class="rlabel" for="medium">
-                                            <input class="base_button" type="radio" name="size" id="medium" value="Medium">Medium</input>
-                                            <p class="base_price">$<var class=size_price value="10.00">10.00</var></p>
-                                        </label><br>
-                                        <label class="rlabel" for="large">
-                                            <input class="base_button" type="radio" name="size" id="large" value="Large">Large</input>
-                                            <p class="base_price">$<var class="size_price" value="14.00">14.00</var></p>
-                                        </label><br>
-                                        <label class="rlabel" for="extra_large">
-                                            <input class="base_button" type="radio" name="size" id="extra_large" value="Extra Large">Extra Large</input>
-                                            <p class="base_price">$<var class="size_price" value="16.00">16.00</var></p>
-                                        </label><br>
                                     </form>
                                 </div>
                                 <!-- /Size Options -->
@@ -75,24 +78,28 @@
                                         <span class="base_header wave">
                                             <h4 class="text-white">Crust</h4>
                                         </span>
-                                        <div class="img_container">
-                                                <img src=".\img\crust_photo.jpeg" alt="crust" class="side_image" id="crust_image">
+                                        <div class="base_text container">
+                                            <div class="img_container">
+                                                    <img src=".\img\crust_photo.jpeg" alt="crust" class="side_image" id="crust_image">
+                                            </div>
+                                    
+                                            <label class="rlabel" for="plain">
+                                                <input  class="base_button" type="radio" name="crust" id="plain" value="Plain Crust" checked>Plain Crust</input>
+                                            </label><br>
+                                            <label class="rlabel" for="gbcrust">
+                                                <input class="base_button" type="radio" name="crust" id="gbcrust" value="Garlic Butter Crust">Garlic Butter Crust</input>
+                                            </label><br>
+                                            <label class="rlabel" for="cscrust" id="cscrust_label">
+                                                <input class="base_button" type="radio" name="crust" id="cscrust" value="Cheese-Stuffed Crust">Cheese-Stuffed Crust</input>
+                                                <p class="base_price crust_price">+$<var  value="3.00">3.00</var></p>
+                                            </label><br>
+                                            <label class="rlabel" for="spicy">
+                                            <input class="base_button" type="radio" name="crust" id="spicy" value="Spicy Crust">Spicy Crust</input>
+                                            </label><br>
+                                            <label class="rlabel" for="hscrust">
+                                            <input class="base_button" type="radio" name="crust" id="hscrust" value="House Special Crust">House Special Crust</input>
+                                            </label>
                                         </div>
-                                        <label class="rlabel" for="plain">
-                                            <input  class="base_button" type="radio" name="crust" id="plain" value="Plain Crust" checked>Plain Crust</input>
-                                        </label><br>
-                                        <label class="rlabel" for="gbcrust">
-                                            <input class="base_button" type="radio" name="crust" id="gbcrust" value="Garlic Butter Crust">Garlic Butter Crust</input>
-                                        </label><br>
-                                        <label class="rlabel" for="cscrust">
-                                            <input class="base_button" type="radio" name="crust" id="cscrust" value="Cheese-Stuffed Crust">Cheese-Stuffed Crust</input>
-                                        </label><br>
-                                        <label class="rlabel" for="spicy">
-                                        <input class="base_button" type="radio" name="crust" id="spicy" value="Spicy Crust">Spicy Crust</input>
-                                        </label><br>
-                                        <label class="rlabel" for="hscrust">
-                                        <input class="base_button" type="radio" name="crust" id="hscrust" value="House Special Crust">House Special Crust</input>
-                                        </label>
                                     </form>
                                 </div>
                                 <!-- /Crust Options -->
@@ -102,22 +109,24 @@
                                             <span class="base_header wave">
                                                 <h4 class="text-white">Sauce</h4>
                                             </span>
-                                            <div class="img_container">
-                                                    <img src=".\img\sauce_photo.jpg" alt="sauce" class="side_image" id="sauce_image">
-                                            </div>
-                                            <label class="rlabel" for="marinara">
-                                                <input class="base_button" type="radio" name="sauce" id="marinara" value="Marinara Sauce"checked>Marinara Sauce</input>
-                                            </label><br>
-                                            <label class="rlabel" for="white">
-                                                <input class="base_button" type="radio" name="sauce" id="white" value="White Sauce">White Sauce</input>
-                                            </label><br>
-                                            <label class="rlabel" for="bbq">
-                                                <input class="base_button" type="radio" name="sauce" id="bbq" value="Barbecue Sauce">Barbecue Sauce</input>
-                                            </label><br>
-                                            <label class="rlabel" for="nosauce">
+                                            <div class="base_text container">
+                                                <div class="img_container">
+                                                        <img src=".\img\sauce_photo.jpg" alt="sauce" class="side_image" id="sauce_image">
+                                                </div>
+                                                <label class="rlabel" for="marinara">
+                                                    <input class="base_button" type="radio" name="sauce" id="marinara" value="Marinara Sauce"checked>Marinara Sauce</input>
+                                                </label><br>
+                                                <label class="rlabel" for="white">
+                                                    <input class="base_button" type="radio" name="sauce" id="white" value="White Sauce">White Sauce</input>
+                                                </label><br>
+                                                <label class="rlabel" for="bbq">
+                                                    <input class="base_button" type="radio" name="sauce" id="bbq" value="Barbecue Sauce">Barbecue Sauce</input>
+                                                </label><br>
+                                                <label class="rlabel" for="nosauce">
                                                 <input class="base_button" type="radio" name="sauce" id="nosauce" value="No Sauce">No Sauce</input>
-                                            </label>
-                                    </form>
+                                                </label>
+                                            </div>
+                                        </form>
                                 </div>
                                 <!-- /Sauce Options -->
                                 <!-- Cheese Options -->
@@ -127,19 +136,21 @@
                                         <span class="base_header wave">
                                             <h4 class="text-white">Cheese</h4>
                                         </span>
-                                        <div class="img_container">
-                                                <img src="C:\Users\David\Documents\GitHub\Tech-Academy-JavaScript-Coding-Projects\Pizza_Order\img\cheese_photo.jpeg" alt="cheese" class="side_image" id="cheese_image">
-                                         </div>
-                                        <label class="rlabel" for="regular">
-                                            <input class="base_button" type="radio" name="cheese" id="regular" value="Regular Cheese"checked>Regular Cheese</input>
-                                        </label><br>
-                                        <label class="rlabel" for="extra">
-                                            <input class="base_button" type="radio" name="cheese" id="extra" value="Extra Cheese">Extra Cheese</input>
-                                            <p class="base_price">+$<var class=cheese_price value="3.00">3.00</var></p>
-                                        </label><br>
-                                        <label class="rlabel" for="nocheese">
-                                            <input class="base_button" type="radio" name="cheese" id="nocheese" value="No Cheese">No Cheese</input>
-                                        </label>
+                                        <div class="base_text container">
+                                            <div class="img_container">
+                                                    <img src="C:\Users\David\Documents\GitHub\Tech-Academy-JavaScript-Coding-Projects\Pizza_Order\img\cheese_photo.jpeg" alt="cheese" class="side_image" id="cheese_image">
+                                            </div>
+                                            <label class="rlabel" for="regular">
+                                                <input class="base_button" type="radio" name="cheese" id="regular" value="Regular Cheese"checked>Regular Cheese</input>
+                                            </label><br>
+                                            <label class="rlabel" for="extra">
+                                                <input class="base_button" type="radio" name="cheese" id="extra" value="Extra Cheese">Extra Cheese</input>
+                                                <p class="base_price">+$<var class=cheese_price value="3.00">3.00</var></p>
+                                            </label><br>
+                                            <label class="rlabel" for="nocheese">
+                                                <input class="base_button" type="radio" name="cheese" id="nocheese" value="No Cheese">No Cheese</input>
+                                            </label>
+                                        </div>
                                     </form>
                                 </div>
             <!-- /Cheese Options -->
@@ -150,6 +161,7 @@
                 </div>
             </div>
             <br>
+
        
     <!-- Toppings -->
     <div class="container" id="top_cont">
@@ -218,7 +230,7 @@
                     </form>
                 </div>
             </div>
-            <div class="col border border-secondary px-0" id="checkout_box">
+            <div class="col border border-secondary px-0 toppings_container" id="checkout_box">
                 <div class="container px-0" id= "img_container">
                     <img src=".\img\pizza.jpg" alt="" id="pizza_picture">
                 </div>
@@ -248,6 +260,7 @@
 
                 </div>
                 <div class="receipt-footer">
+                    <br>
                     <button type="submit" action="" id="confirm_button" data-dismiss="modal">Confirm Order</button>
                   
                 </div>

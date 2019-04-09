@@ -184,27 +184,36 @@ function fillBasePrice(){
 
         var sizeArray = document.getElementsByName("size");
         var sizePriceArray = [6, 10, 14, 16];
-        for (var i=0; i<sizeArray.length; ++i){
+        for (var i=0; i<sizeArray.length; i++){
                 if (sizeArray[i].checked == true){
                         var sizePrice = sizePriceArray[i];
                 }
         }
        
+
+        //Crust
+
+        var crustArray = document.getElementsByName("crust");
+        var crustPriceArray = [0,0,3,0,0];
+        for (var i=0; i<crustArray.length; i++){
+                if(crustArray[i].checked == true){
+                        var crustPrice = crustPriceArray[i];
+                }
+        }
         //Cheese
 
         var cheeseArray = document.getElementsByName("cheese");
         var cheesePriceArray = [0, 3, 0];
-        for (var i=0; i<cheeseArray.length; ++i){
+        for (var i=0; i<cheeseArray.length; i++){
                 if (cheeseArray[i].checked == true){
                         var cheesePrice = cheesePriceArray[i];
                 }
         }
         
-        var basePrice = [sizePrice, 0, 0, cheesePrice];
+        var basePrice = [sizePrice, crustPrice, 0, cheesePrice];
         return basePrice;
 
 }
-
 
 
 function fillToppingsItems(cname){
@@ -230,3 +239,6 @@ function fillToppingsPrices(cname){
         console.log (toppingPrice);
         return toppingPrice;
 }
+
+
+

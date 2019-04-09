@@ -144,22 +144,27 @@ html, body{
 }
 #address {
     position: absolute;
-    top: 8px;
+    top: 23%;
     right: 16px;
     font-size: 18px;
   }
-  #brand{
+#brand{
       font-size: 18px;
   }
+
+.pizza_container{
+    height: 70%;
+}
 #pizza_picture{
     width: 100%;
-    height: 80%;
+    height: 100%;
 }
+
+
 #place_order{
     background-color: #E50808;
     color: white;
-    margin: 0px;
-    padding: 20px;
+    padding: 35px;
     position: relative;
 }
 #place_order:hover{
@@ -215,7 +220,7 @@ td{
 #confirm_button{
     position: absolute;
     right: 16px;
-    bottom: 8px;
+    bottom: 6px;
     background-color: #E50808;
     color: white;
 }
@@ -252,3 +257,139 @@ h1{
 h4{
     font-family: 'Oleo Script', Arial, Helvetica, sans-serif;
 }
+
+table{
+    margin-bottom: 10px;
+}
+
+#coupon_form{
+    padding: 10px;
+}
+
+/* MEDIA QUERIES */
+
+@media  (max-width: 1125px){
+    .base_form label{
+        right: -300px;
+    }
+
+    .base_price{
+        margin: -35px 250px;
+    }
+   
+   #top-list, #top-list li{
+       left: 10%;
+    }
+   #address {
+       right: 31px;
+    }
+}
+
+
+@media (max-width: 1024px){
+
+    .side_image{
+        display: none;
+    }
+    .base_form label{
+        left: 25px;
+    }
+
+    .base_price{
+        margin: -35px 250px;
+    }
+   
+   #top-list, #top-list li{
+       left: 1%;
+    }
+   #address {
+       right: 28px;
+    }
+}
+@media (max-width: 770px){
+    #place_order{
+        padding: 40px;
+    }
+}
+@media (max-width: 693px){
+    .no_phone, .btn-group-vertical, .base_btn{
+        display: none;
+    }
+    #base_display{
+        flex-direction: column;
+    }
+    .base_form{
+        display: block;
+        position: relative;
+        margin: 10px auto 30px auto;
+        font-size: 14px;
+    }
+    
+    .base_price{
+        margin: -20px 150px;
+    }
+   
+    .base_options{
+        margin-bottom: 10px;
+    }
+
+    .top_cont, .toppings_container{
+        margin-top: 550px;
+        position: relative;
+    }
+
+    #cheese_form{
+        height: auto;
+    }
+
+    #top-list, #top-list li{
+        display: none;
+     }
+    #address {
+        right: 15px;
+        top: 27%;
+        font-size: 15px;
+     }
+    #brand{
+        top: 20%;
+        font-size: 15px;
+     }
+
+     nav span, li{
+         font-size: 10px;
+     }
+}
+
+@media (max-width: 500px){
+    .toppings_container{
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 450px){
+    #checkout_box{
+        display: block;
+        margin-top: 0px;
+    }
+}
+
+@media  (max-width: 380px){
+    .base_form label{
+        left: 0px;
+    }
+    .base_price{
+        margin: -20px 100px;
+    }
+    .crust_price{
+        position: relative;
+        display: block;
+        top: 15px;
+        text-align: left;
+        left: -90px;
+        margin-bottom: 5px;
+    }
+    #address{
+        font-size: 10px;
+    }
+}
+
